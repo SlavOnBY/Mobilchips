@@ -7,7 +7,7 @@ import config
 file_xls = requests.get(config.url_site)
 df = pd.read_excel('Mobilchips.xls')
 
-def file_load():git config --global user.name
+def file_load():
     if (requests.head(config.url_site).headers['Content-Length']) != os.path.getsize('Mobilchips.xls'):
         with open("Mobilchips.xls", "wb") as code:
             code.write(file_xls.content)
